@@ -7,8 +7,7 @@
 </head>
 <body>
     <div id="shopping-list">
-        <h1>{{ header }}</h1>
-        <input v-model="header">
+        {{ header || "Welcome" }}      
     </div>
     
     <script src="https://unpkg.com/vue@3"></script>
@@ -16,7 +15,7 @@
         const shoppingList =Vue.createApp({
             data() {
                 return {
-                    header: 'Vue is ready to party!'
+                    header: 'Shopping List App'
                 }
             }
         })
